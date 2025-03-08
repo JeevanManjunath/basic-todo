@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="todo.css"> <!-- Link to CSS -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/dfacb09b06.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="todos-bg-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="todos-heading">Todos</h1>
+                    <h1 class="create-task-heading">
+                        Create <span class="create-task-heading-subpart">Task</span>
+                    </h1>
+                    <input type="text" id="todoUserInput" class="todo-user-input" placeholder="What needs to be done ?" />
+                    <button class="add-todo-button" id="addToDoButton">Add</button>
+                    <h1 class="todo-items-heading">
+                        My <span class="todo-items-heading-subpart">Tasks</span>
+                    </h1>
+                    <ul class="todo-items-container" id="todoItemsContainer"></ul>
+                    <button class="add-todo-button" id="saveTodoButton">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>
