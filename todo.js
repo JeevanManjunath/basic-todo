@@ -29,17 +29,21 @@ function onAddTodo() {
 
 addTodoButton.addEventListener("click", onAddTodo);
 
-function onTodoStatusChange(checkboxId, labelId, todoId) {
+function onTodoStatusChange(checkboxId, labelid, todoid) {
     let checkbox = document.getElementById(checkboxId);
-    let labelElement = document.getElementById(labelId);
-    labelElement.classList.toggle("checked");
+    let labelelement = document.getElementById(labelid);
+    
+    labelelement.classList.toggle("checked");
 
-    let todoObject = todoList.find(todo => "todo" + todo.uniqueno === todoId);
-    if (todoObject) {
-        todoObject.isChecked = checkbox.checked;
-        localStorage.setItem("todoList", JSON.stringify(todoList)); // Update storage
+    let todoobjectindex = todoList.findIndex(function(eachtodo) {
+        return "todo" + eachtodo.uniqueno === todoid;
+    });
+
+    if (todoobjectindex !== -1) {
+        todoList[todoobjectindex].isChecked = checkbox.checked; // Correctly update `isChecked` property
     }
 }
+
 
 function deleteTodo(todoId) {
     let todoElement = document.getElementById(todoId);
